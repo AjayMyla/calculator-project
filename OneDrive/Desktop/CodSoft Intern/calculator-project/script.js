@@ -1,0 +1,37 @@
+let display = document.getElementById("display");
+
+/* Add Values */
+
+function appendValue(value){
+
+    display.value += value;
+}
+
+/* Clear */
+
+function clearDisplay(){
+
+    display.value = "";
+}
+
+/* Delete */
+
+function deleteLast(){
+
+    display.value = display.value.slice(0,-1);
+}
+
+/* Calculate */
+
+function calculate(){
+
+    try{
+
+        display.value = eval(display.value);
+    }
+
+    catch{
+
+        display.value = "Error";
+    }
+}
